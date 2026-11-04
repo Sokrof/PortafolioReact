@@ -6,6 +6,35 @@ function readProject() {
   return PROJECTS.some((item) => item.id === id) ? id : PROJECTS[0].id;
 }
 
+function ProjectYouTube({ media, projectName }) {
+  const [playing, setPlaying] = useState(false);
+
+  if (!playing) {
+    return (
+      <button
+        type="button"
+        className="project-youtube-preview"
+        onClick={() => setPlaying(true)}
+        aria-label={`Reproducir ${media.title} de ${projectName}`}
+      >
+        <img src={media.poster} alt="" loading="lazy" />
+        <span className="project-youtube-play" aria-hidden="true">▶</span>
+        <span className="project-youtube-label">Reproducir demostración</span>
+      </button>
+    );
+  }
+
+  return (
+    <iframe
+      src={`https://www.youtube-nocookie.com/embed/${media.youtubeId}?autoplay=1`}
+      title={`${media.title} de ${projectName}`}
+      referrerPolicy="strict-origin-when-cross-origin"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowFullScreen
+    />
+  );
+}
+
 export default function ProjectsScreen() {
   const [selected, setSelected] = useState(readProject);
   const [imageIndex, setImageIndex] = useState(0);
@@ -77,15 +106,20 @@ export default function ProjectsScreen() {
                 <h3>El proyecto en vídeo</h3>
                 <div className="project-video-list">
                   {project.mediaVideos.map((media) => (
-                    <div className="project-video" key={media.src}>
+                    <div className="project-video" key={media.src ?? media.youtubeId}>
                       <div className="project-video-copy">
                         <h4>{media.title}</h4>
                         <p>{media.description}</p>
+                        {media.url && <a href={media.url} target="_blank" rel="noopener noreferrer">Abrir en YouTube <span aria-hidden="true">↗</span></a>}
                       </div>
-                      <video controls preload="none" playsInline poster={media.poster} aria-label={`${media.title} de ${project.name}`}>
-                        <source src={media.src} type="video/mp4" />
-                        Tu navegador no puede reproducir este vídeo.
-                      </video>
+                      {media.youtubeId ? (
+                        <ProjectYouTube media={media} projectName={project.name} />
+                      ) : (
+                        <video controls preload="none" playsInline poster={media.poster} aria-label={`${media.title} de ${project.name}`}>
+                          <source src={media.src} type="video/mp4" />
+                          Tu navegador no puede reproducir este vídeo.
+                        </video>
+                      )}
                     </div>
                   ))}
                 </div>

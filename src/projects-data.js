@@ -72,6 +72,15 @@ export const PROJECTS = [
     ],
     tags: ['Angular', 'TypeScript', 'Formularios reactivos', 'localStorage', 'TCGdex'],
     repository: 'https://github.com/Sokrof/Pokemon-TradingCardGame-DeckBuilder',
+    mediaVideos: [
+      {
+        title: 'Demostración del DeckBuilder',
+        description: 'Recorrido por la aplicación y su uso de la API TCGdex.',
+        youtubeId: '07Ydr8y5-oY',
+        url: 'https://www.youtube.com/watch?v=07Ydr8y5-oY',
+        poster: '/assets/projects/pokemon-cartas.jpg',
+      },
+    ],
   },
   {
     id: 'library',
