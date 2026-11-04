@@ -1,12 +1,23 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { PROJECTS } from './projects-data.js';
 
+function readProject() {
+  const id = window.location.hash.slice(1).split('/')[1];
+  return PROJECTS.some((item) => item.id === id) ? id : PROJECTS[0].id;
+}
+
 export default function ProjectsScreen() {
-  const [selected, setSelected] = useState(PROJECTS[0].id);
+  const [selected, setSelected] = useState(readProject);
   const [imageIndex, setImageIndex] = useState(0);
   const project = PROJECTS.find((item) => item.id === selected);
   const images = project.images ?? (project.image ? [{ src: project.image, alt: `Captura de ${project.name}` }] : []);
   const currentImage = images[imageIndex] ?? images[0];
+
+  useEffect(() => {
+    const syncProject = () => { setSelected(readProject()); setImageIndex(0); };
+    window.addEventListener('hashchange', syncProject);
+    return () => window.removeEventListener('hashchange', syncProject);
+  }, []);
 
   return (
     <main className="project-screen">
@@ -23,7 +34,7 @@ export default function ProjectsScreen() {
               type="button"
               key={item.id}
               className={`project-choice${selected === item.id ? ' project-choice--active' : ''}`}
-              onClick={() => { setSelected(item.id); setImageIndex(0); }}
+              onClick={() => { window.location.hash = `projects/${item.id}`; setSelected(item.id); setImageIndex(0); }}
               aria-pressed={selected === item.id}
               style={{ '--project-accent': item.accent }}
             >
@@ -36,7 +47,7 @@ export default function ProjectsScreen() {
         </div>
 
         <article className="project-detail" style={{ '--project-accent': project.accent }} aria-live="polite">
-          <div className="project-art">
+          <div className={`project-art${project.id === 'habithero' ? ' project-art--portrait' : ''}`}>
             {currentImage ? <img src={currentImage.src} alt={currentImage.alt} /> : <span aria-hidden="true">{project.symbol}</span>}
           </div>
           {images.length > 1 && (
@@ -61,6 +72,25 @@ export default function ProjectsScreen() {
             <p className="project-summary">{project.summary}</p>
             <ul className="project-detail-list">{project.details.map((detail) => <li key={detail}>{detail}</li>)}</ul>
             <div className="project-tags">{project.tags.map((tag) => <span key={tag}>{tag}</span>)}</div>
+            {project.mediaVideos?.length > 0 && (
+              <section className="project-videos" aria-label={`Vídeos de ${project.name}`}>
+                <h3>El proyecto en vídeo</h3>
+                <div className="project-video-list">
+                  {project.mediaVideos.map((media) => (
+                    <div className="project-video" key={media.src}>
+                      <div className="project-video-copy">
+                        <h4>{media.title}</h4>
+                        <p>{media.description}</p>
+                      </div>
+                      <video controls preload="none" playsInline poster={media.poster} aria-label={`${media.title} de ${project.name}`}>
+                        <source src={media.src} type="video/mp4" />
+                        Tu navegador no puede reproducir este vídeo.
+                      </video>
+                    </div>
+                  ))}
+                </div>
+              </section>
+            )}
             <div className="project-actions">
               {project.repository && <a className="project-link" href={project.repository} target="_blank" rel="noopener noreferrer">Ver repositorio <span aria-hidden="true">↗</span></a>}
               {project.video && <a className="project-link" href={project.video} target="_blank" rel="noopener noreferrer">Ver demostración <span aria-hidden="true">↗</span></a>}

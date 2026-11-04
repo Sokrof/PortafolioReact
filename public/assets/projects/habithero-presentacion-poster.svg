@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" role="img" aria-labelledby="title desc">
+  <title id="title">HabitHero: presentación del proyecto</title>
+  <desc id="desc">Portada de la presentación académica de HabitHero</desc>
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#10182d"/>
+      <stop offset="1" stop-color="#082c31"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop stop-color="#34d399"/>
+      <stop offset="1" stop-color="#65e2e9"/>
+    </linearGradient>
+  </defs>
+  <rect width="1280" height="720" fill="url(#background)"/>
+  <path d="M0 0h1280v720H0z" fill="none" stroke="#65e2e9" stroke-opacity=".2" stroke-width="2"/>
+  <path d="M0 610h1280M0 652h1280M0 694h1280M790 0v720M890 0v720M990 0v720M1090 0v720M1190 0v720" stroke="#65e2e9" stroke-opacity=".07"/>
+  <rect x="84" y="106" width="207" height="38" rx="5" fill="#34d399" fill-opacity=".13" stroke="#34d399" stroke-opacity=".6"/>
+  <text x="104" y="131" fill="#67e8ca" font-family="Arial, sans-serif" font-size="16" font-weight="700" letter-spacing="2">PROYECTO FINAL DAM</text>
+  <text x="82" y="282" fill="#f3f7ff" font-family="Arial, sans-serif" font-size="88" font-weight="800" letter-spacing="-4">HABIT<tspan fill="#53dba9">HERO</tspan></text>
+  <rect x="84" y="316" width="315" height="6" rx="3" fill="url(#accent)"/>
+  <text x="84" y="385" fill="#d4e2ee" font-family="Arial, sans-serif" font-size="29">Hábitos convertidos en misiones.</text>
+  <text x="84" y="433" fill="#a9bece" font-family="Arial, sans-serif" font-size="23">La idea, el proceso y la aventura.</text>
+  <rect x="84" y="574" width="444" height="1" fill="#92b6c2" fill-opacity=".4"/>
+  <text x="84" y="611" fill="#8fb3bd" font-family="Arial, sans-serif" font-size="16" letter-spacing="2">PRESENTACIÓN ACADÉMICA · 2025</text>
+  <circle cx="999" cy="361" r="194" fill="#34d399" fill-opacity=".05" stroke="#34d399" stroke-opacity=".34" stroke-width="2"/>
+  <circle cx="999" cy="361" r="155" fill="#34d399" fill-opacity=".05" stroke="#34d399" stroke-opacity=".2" stroke-width="2"/>
+  <path d="M999 245l116 45v76c0 86-60 138-116 163-56-25-116-77-116-163v-76z" fill="#153b44" stroke="#66e1b2" stroke-width="7"/>
+  <path d="M999 282l81 31v53c0 58-37 96-81 119-44-23-81-61-81-119v-53z" fill="#0f2638"/>
+  <path d="M999 334v104M947 386h104" stroke="#67e8ca" stroke-width="17" stroke-linecap="round"/>
+</svg>

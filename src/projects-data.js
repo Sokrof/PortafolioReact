@@ -23,13 +23,35 @@ export const PROJECTS = [
     year: '2025',
     symbol: 'HH',
     accent: '#34d399',
-    summary: 'Aplicación nativa para el seguimiento de hábitos, desarrollada como proyecto final de DAM.',
-    details: [
-      'Interfaz Android en Java con navegación entre pantallas.',
-      'Autenticación con Google Sign-In y acceso a datos mediante Cloud Firestore.',
+    images: [
+      { src: '/assets/projects/habithero-aventura.jpg', alt: 'Pantalla de aventura de HabitHero con personaje, enemigo y barras de progreso' },
+      { src: '/assets/projects/habithero-mision.jpg', alt: 'Formulario para crear una misión con categoría y dificultad' },
+      { src: '/assets/projects/habithero-combate.jpg', alt: 'Interacción de combate de HabitHero' },
+      { src: '/assets/projects/habithero-estadisticas.jpg', alt: 'Estadísticas de misiones completadas en HabitHero' },
     ],
-    tags: ['Java', 'Android SDK', 'Firebase', 'Firestore'],
+    summary: 'Proyecto final de DAM: una aplicación Android que convierte tareas y hábitos en misiones dentro de una aventura.',
+    details: [
+      'La propuesta inicial buscaba ayudar a estudiantes, deportistas y personas que quieren reducir la procrastinación mediante la gamificación.',
+      'Permite crear misiones principales o diarias, clasificarlas por ámbito y dificultad, y seguir su progreso.',
+      'El avance se representa con niveles, recursos, combates y recompensas; una pantalla de estadísticas resume las misiones completadas.',
+      'Desarrollada en Java para Android, con autenticación y persistencia de datos mediante Firebase y Cloud Firestore.',
+    ],
+    tags: ['Java', 'Android SDK', 'Firebase', 'Firestore', 'Gamificación'],
     repository: 'https://github.com/Sokrof/Android-HabitHero-TFG',
+    mediaVideos: [
+      {
+        title: 'Demostración técnica',
+        description: 'Recorrido por la aplicación y sus funciones en un emulador Android.',
+        src: '/assets/projects/habithero-demo.mp4',
+        poster: '/assets/projects/habithero-demo-poster.jpg',
+      },
+      {
+        title: 'Presentación del proyecto',
+        description: 'La idea inicial y el contexto académico del proyecto.',
+        src: '/assets/projects/habithero-presentacion.mp4',
+        poster: '/assets/projects/habithero-presentacion-poster.svg',
+      },
+    ],
   },
   {
     id: 'pokemon',

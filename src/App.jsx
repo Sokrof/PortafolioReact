@@ -125,7 +125,7 @@ function StartScreen({ onStart, crtOn, isDark, onToggleTheme }) {
 
 export default function App() {
   const readScreen = () => {
-    const hash = window.location.hash.slice(1);
+    const hash = window.location.hash.slice(1).split('/')[0];
     return NAV_ITEMS.some((item) => item.id === hash) ? hash : 'start';
   };
   const [screen, setScreen] = useState(readScreen);
