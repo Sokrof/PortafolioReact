@@ -37,13 +37,18 @@ export const PROJECTS = [
     type: 'Aplicación web',
     symbol: 'TCG',
     accent: '#fbbf24',
-    summary: 'Constructor de mazos para Pokémon TCG con búsqueda de cartas y validación de reglas.',
-    details: [
-      'Consulta de cartas mediante TCGdex y carga progresiva del catálogo.',
-      'Creación y edición de mazos con límites de tamaño y de copias por carta.',
-      'Los mazos se conservan en memoria durante la sesión; no hay persistencia entre visitas.',
+    images: [
+      { src: '/assets/projects/pokemon-mazos.jpg', alt: 'Vista de mazos con colores según el tipo predominante' },
+      { src: '/assets/projects/pokemon-cartas.jpg', alt: 'Catálogo de cartas con búsqueda y filtros por tipo' },
+      { src: '/assets/projects/pokemon-mazo-detalle.jpg', alt: 'Vista de detalle de un mazo eléctrico' },
     ],
-    tags: ['Angular', 'Tailwind CSS', 'RxJS', 'TCGdex'],
+    summary: 'Aplicación Angular para crear, consultar y gestionar mazos de Pokémon TCG con atención al diseño y al uso cotidiano.',
+    details: [
+      'Búsqueda y filtrado de cartas mediante una API externa, con carga progresiva de 20 en 20.',
+      'Creación y edición de mazos con validación del número de copias y vistas de detalle.',
+      'Persistencia en localStorage para conservar los mazos al recargar la página; presentación con miniaturas y colores según el tipo predominante.',
+    ],
+    tags: ['Angular', 'TypeScript', 'Formularios reactivos', 'localStorage', 'TCGdex'],
     repository: 'https://github.com/Sokrof/Pokemon-TradingCardGame-DeckBuilder',
   },
   {
@@ -76,15 +81,21 @@ export const PROJECTS = [
   },
   {
     id: 'platformer',
-    name: 'Plataformas 2D',
+    name: 'Juego 2D de scroll lateral',
     type: 'Práctica de videojuegos',
     symbol: '2D',
     accent: '#fb923c',
-    summary: 'Exploración del desarrollo de un juego de plataformas en Unity a partir de una plantilla.',
-    details: [
-      'Trabajo con escenas, sprites, físicas y control del personaje en un entorno 2D.',
-      'Repositorio privado: la ficha recoge el contexto del proyecto sin exponer su código.',
+    images: [
+      { src: '/assets/projects/plataformas-01.jpg', alt: 'Personaje saltando entre plataformas en una jungla pixel art' },
+      { src: '/assets/projects/plataformas-02.jpg', alt: 'Personaje y enemigos en un escenario de scroll lateral' },
     ],
-    tags: ['Unity', 'C#', '2D'],
+    summary: 'Recreación 2D inspirada en Metal Slug, creada en Unity durante el primer año de DAM.',
+    details: [
+      'Escenario de jungla pixel art con scroll lateral, animaciones de sprites y detección de colisiones.',
+      'Movimiento del jugador y enemigos con comportamiento básico de IA.',
+      'Proyecto académico de alcance limitado que sirvió para practicar el game loop, las físicas 2D y los estados de animación.',
+    ],
+    tags: ['Unity', 'C#', 'Físicas 2D', 'Pixel art'],
+    video: 'https://www.youtube.com/watch?v=thi7t4Bsyxc',
   },
 ];
