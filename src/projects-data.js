@@ -127,6 +127,14 @@ export const PROJECTS = [
       'Proyecto académico de alcance limitado que sirvió para practicar el game loop, las físicas 2D y los estados de animación.',
     ],
     tags: ['Unity', 'C#', 'Físicas 2D', 'Pixel art'],
-    video: 'https://www.youtube.com/watch?v=thi7t4Bsyxc',
+    mediaVideos: [
+      {
+        title: 'Demostración del juego 2D',
+        description: 'Gameplay del proyecto de scroll lateral desarrollado en Unity.',
+        youtubeId: 'thi7t4Bsyxc',
+        url: 'https://www.youtube.com/watch?v=thi7t4Bsyxc',
+        poster: '/assets/projects/plataformas-02.jpg',
+      },
+    ],
   },
 ];
