@@ -1879,6 +1879,7 @@ body[data-theme="light"] .placeholder-screen span { color: rgba(0 0 0 / 0.08); }
   letter-spacing: .2em;
   text-transform: uppercase;
 }
+.project-kicker { text-transform: none; }
 .project-heading h1, .profile-panel h1 {
   margin: 0 0 12px;
   font-size: clamp(2rem, 4.5vw, 4.5rem);

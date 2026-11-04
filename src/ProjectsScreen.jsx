@@ -51,7 +51,7 @@ export default function ProjectsScreen() {
   return (
     <main className="project-screen">
       <div className="project-heading">
-        <p className="project-kicker">ARCHIVO / {String(PROJECTS.length).padStart(2, '0')} PROYECTOS</p>
+        <p className="project-kicker">Proyectos</p>
         <h1>SELECCIÓN DE PROYECTO</h1>
         <p>Elige una ficha para explorar qué construí, con qué herramientas y hasta dónde llegó cada proyecto.</p>
       </div>
