@@ -1,3 +1,5 @@
+import { assetUrl } from './asset-url.js';
+
 export const EXPERIENCE = [
   {
     id: 'd4b',
@@ -14,13 +16,13 @@ export const EXPERIENCE = [
       'Automatización de la asignación de proyectos y tareas y propagación de datos en diarios de cobro y pago.',
       'Informes RDLC personalizados con múltiples orígenes de datos y agrupaciones.',
     ],
-    thumbnail: '/assets/exp/d4b_logo.png',
-    preview: '/assets/exp/d4b_grande.png',
+    thumbnail: assetUrl('assets/exp/d4b_logo.png'),
+    preview: assetUrl('assets/exp/d4b_grande.png'),
     accent: '#0078d4',
     thumbnailFit: 'contain',
     previewFit: 'contain',
     screenshots: [
-      '/assets/exp/d4b_grande.png',
+      assetUrl('assets/exp/d4b_grande.png'),
     ],
   },
   {
@@ -37,12 +39,12 @@ export const EXPERIENCE = [
       'Implementación de pasarela de pagos, precios y suscripciones con Laravel, Stripe y MySQL.',
       'Desarrollo de interfaces web y páginas de producto para la plataforma.',
     ],
-    thumbnail: '/assets/exp/hechiceria_logo.jpg',
-    preview: '/assets/exp/hechiceria_grande.png',
+    thumbnail: assetUrl('assets/exp/hechiceria_logo.jpg'),
+    preview: assetUrl('assets/exp/hechiceria_grande.png'),
     accent: '#7c3aed',
     previewFit: 'contain',
     screenshots: [
-      '/assets/exp/hechiceria_grande.png',
+      assetUrl('assets/exp/hechiceria_grande.png'),
     ],
   },
   {
@@ -59,13 +61,13 @@ export const EXPERIENCE = [
       'Control de stock y recepción de llamadas telefónicas.',
       'Mantenimiento y cuidado del visual merchandising siguiendo los estándares de la empresa.',
     ],
-    thumbnail: '/assets/exp/ktwin_logo.png',
-    preview: '/assets/exp/ktwin_grande.jpg',
+    thumbnail: assetUrl('assets/exp/ktwin_logo.png'),
+    preview: assetUrl('assets/exp/ktwin_grande.jpg'),
     accent: '#ffffff',
     thumbnailFit: 'contain',
     previewFit: 'cover',
     screenshots: [
-      '/assets/exp/ktwin_grande.jpg',
+      assetUrl('assets/exp/ktwin_grande.jpg'),
     ],
   },
   {
@@ -83,13 +85,13 @@ export const EXPERIENCE = [
       'Mantenimiento de equipos informáticos y sistemas operativos.',
       'Monitorización de sistemas frigoríficos para Mercadona.',
     ],
-    thumbnail: '/assets/exp/Eliwell_logo.png',
-    preview: '/assets/exp/Eliwell_grande.png',
+    thumbnail: assetUrl('assets/exp/Eliwell_logo.png'),
+    preview: assetUrl('assets/exp/Eliwell_grande.png'),
     accent: '#fff09e',
     thumbnailFit: 'contain',
     previewFit: 'contain',
     screenshots: [
-      '/assets/exp/Eliwell_grande.png',
+      assetUrl('assets/exp/Eliwell_grande.png'),
     ],
   },
 ];

@@ -1,3 +1,5 @@
+import { assetUrl } from './asset-url.js';
+
 export const PROJECTS = [
   {
     id: 'cieepflix',
@@ -6,7 +8,7 @@ export const PROJECTS = [
     year: '2025',
     symbol: 'CF',
     accent: '#f43f5e',
-    image: '/assets/projects/cieepflix.jpg',
+    image: assetUrl('assets/projects/cieepflix.jpg'),
     summary: 'Gestión de series con una web Angular, una API REST en NestJS y datos en MongoDB Atlas.',
     details: [
       'Fichas de series, categorías, búsqueda y operaciones de creación, edición y eliminación.',
@@ -24,10 +26,10 @@ export const PROJECTS = [
     symbol: 'HH',
     accent: '#34d399',
     images: [
-      { src: '/assets/projects/habithero-aventura.jpg', alt: 'Pantalla de aventura de HabitHero con personaje, enemigo y barras de progreso' },
-      { src: '/assets/projects/habithero-mision.jpg', alt: 'Formulario para crear una misión con categoría y dificultad' },
-      { src: '/assets/projects/habithero-combate.jpg', alt: 'Interacción de combate de HabitHero' },
-      { src: '/assets/projects/habithero-estadisticas.jpg', alt: 'Estadísticas de misiones completadas en HabitHero' },
+      { src: assetUrl('assets/projects/habithero-aventura.jpg'), alt: 'Pantalla de aventura de HabitHero con personaje, enemigo y barras de progreso' },
+      { src: assetUrl('assets/projects/habithero-mision.jpg'), alt: 'Formulario para crear una misión con categoría y dificultad' },
+      { src: assetUrl('assets/projects/habithero-combate.jpg'), alt: 'Interacción de combate de HabitHero' },
+      { src: assetUrl('assets/projects/habithero-estadisticas.jpg'), alt: 'Estadísticas de misiones completadas en HabitHero' },
     ],
     summary: 'Proyecto final de DAM: una aplicación Android que convierte tareas y hábitos en misiones dentro de una aventura.',
     details: [
@@ -42,14 +44,14 @@ export const PROJECTS = [
       {
         title: 'Demostración técnica',
         description: 'Recorrido por la aplicación y sus funciones en un emulador Android.',
-        src: '/assets/projects/habithero-demo.mp4',
-        poster: '/assets/projects/habithero-demo-poster.jpg',
+        src: assetUrl('assets/projects/habithero-demo.mp4'),
+        poster: assetUrl('assets/projects/habithero-demo-poster.jpg'),
       },
       {
         title: 'Presentación del proyecto',
         description: 'La idea inicial y el contexto académico del proyecto.',
-        src: '/assets/projects/habithero-presentacion.mp4',
-        poster: '/assets/projects/habithero-presentacion-poster.svg',
+        src: assetUrl('assets/projects/habithero-presentacion.mp4'),
+        poster: assetUrl('assets/projects/habithero-presentacion-poster.svg'),
       },
     ],
   },
@@ -60,9 +62,9 @@ export const PROJECTS = [
     symbol: 'TCG',
     accent: '#fbbf24',
     images: [
-      { src: '/assets/projects/pokemon-mazos.jpg', alt: 'Vista de mazos con colores según el tipo predominante' },
-      { src: '/assets/projects/pokemon-cartas.jpg', alt: 'Catálogo de cartas con búsqueda y filtros por tipo' },
-      { src: '/assets/projects/pokemon-mazo-detalle.jpg', alt: 'Vista de detalle de un mazo eléctrico' },
+      { src: assetUrl('assets/projects/pokemon-mazos.jpg'), alt: 'Vista de mazos con colores según el tipo predominante' },
+      { src: assetUrl('assets/projects/pokemon-cartas.jpg'), alt: 'Catálogo de cartas con búsqueda y filtros por tipo' },
+      { src: assetUrl('assets/projects/pokemon-mazo-detalle.jpg'), alt: 'Vista de detalle de un mazo eléctrico' },
     ],
     summary: 'Aplicación Angular para crear, consultar y gestionar mazos de Pokémon TCG con atención al diseño y al uso cotidiano.',
     details: [
@@ -78,7 +80,7 @@ export const PROJECTS = [
         description: 'Recorrido por la aplicación y su uso de la API TCGdex.',
         youtubeId: '07Ydr8y5-oY',
         url: 'https://www.youtube.com/watch?v=07Ydr8y5-oY',
-        poster: '/assets/projects/pokemon-cartas.jpg',
+        poster: assetUrl('assets/projects/pokemon-cartas.jpg'),
       },
     ],
   },
@@ -117,8 +119,8 @@ export const PROJECTS = [
     symbol: '2D',
     accent: '#fb923c',
     images: [
-      { src: '/assets/projects/plataformas-01.jpg', alt: 'Personaje saltando entre plataformas en una jungla pixel art' },
-      { src: '/assets/projects/plataformas-02.jpg', alt: 'Personaje y enemigos en un escenario de scroll lateral' },
+      { src: assetUrl('assets/projects/plataformas-01.jpg'), alt: 'Personaje saltando entre plataformas en una jungla pixel art' },
+      { src: assetUrl('assets/projects/plataformas-02.jpg'), alt: 'Personaje y enemigos en un escenario de scroll lateral' },
     ],
     summary: 'Recreación 2D inspirada en Metal Slug, creada en Unity durante el primer año de DAM.',
     details: [
@@ -133,7 +135,7 @@ export const PROJECTS = [
         description: 'Gameplay del proyecto de scroll lateral desarrollado en Unity.',
         youtubeId: 'thi7t4Bsyxc',
         url: 'https://www.youtube.com/watch?v=thi7t4Bsyxc',
-        poster: '/assets/projects/plataformas-02.jpg',
+        poster: assetUrl('assets/projects/plataformas-02.jpg'),
       },
     ],
   },

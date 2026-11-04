@@ -3,13 +3,14 @@ import ExperienceScreen from './ExperienceScreen.jsx';
 import AchievementsScreen from './AchievementsScreen.jsx';
 import ProjectsScreen from './ProjectsScreen.jsx';
 import ProfileScreen from './ProfileScreen.jsx';
+import { assetUrl } from './asset-url.js';
 
 const ASSETS = {
-  background: "/assets/fondo.png",
-  frame: "/assets/marco-desbloquear.png",
-  frameDark: "/assets/marco-desbloquear-dark.png",
-  portrait: "/assets/foto-daniel.png",
-  portraitDark: "/assets/foto-daniel-dark.png",
+  background: assetUrl('assets/fondo.png'),
+  frame: assetUrl('assets/marco-desbloquear.png'),
+  frameDark: assetUrl('assets/marco-desbloquear-dark.png'),
+  portrait: assetUrl('assets/foto-daniel.png'),
+  portraitDark: assetUrl('assets/foto-daniel-dark.png'),
 };
 
 const NAV_ITEMS = [
