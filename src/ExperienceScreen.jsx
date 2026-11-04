@@ -148,7 +148,7 @@ export default function ExperienceScreen() {
           <div className="exp-actions">
             {current.screenshots?.length > 0 && (
               <button className="exp-ver-detalle" onClick={() => setShowGallery(true)}>
-                VISITA MI TRABAJO →
+                VER IMÁGENES →
               </button>
             )}
           </div>
@@ -163,13 +163,14 @@ export default function ExperienceScreen() {
             key={exp.id}
             role="option"
             aria-selected={i === hovered}
+            tabIndex={0}
             className={`exp-thumb${i === hovered ? ' exp-thumb--active' : ''}`}
             style={{ '--thumb-accent': exp.accent, '--thumb-i': i }}
             onMouseEnter={() => setHovered(i)}
-            onClick={() => {
-              if (i === hovered && exp.url) {
-                window.open(exp.url, '_blank', 'noopener,noreferrer');
-              } else {
+            onClick={() => setHovered(i)}
+            onKeyDown={(event) => {
+              if (event.key === 'Enter' || event.key === ' ') {
+                event.preventDefault();
                 setHovered(i);
               }
             }}

@@ -6,7 +6,7 @@ Lo estoy construyendo con React y Vite. Elegí una estética inspirada en los vi
 
 ## Qué encontrarás aquí
 
-Actualmente puedes consultar mi experiencia laboral y mi formación. Estoy preparando las secciones de proyectos, presentación personal y contacto para explicar mejor el trabajo que he realizado y las áreas en las que quiero seguir desarrollándome.
+Puedes consultar mi experiencia laboral, mi formación y una selección de proyectos académicos y personales. También encontrarás una presentación de mi perfil y formas de contactar conmigo. Seguiré ampliando y revisando estas secciones a medida que avance el proyecto.
 
 Me gustaría que este espacio ayude a empresas y equipos a conocer mi trayectoria y mi forma de trabajar. Seguiré revisando el contenido y la interfaz a medida que avance el proyecto.
 

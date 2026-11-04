@@ -2,7 +2,7 @@ export const EXPERIENCE = [
   {
     id: 'd4b',
     company: 'd4b Solutions',
-    role: 'Desarrollador BC · AL',
+    role: 'Desarrollador AL · Business Central',
     period: 'Mar 2026 – May 2026',
     duration: '3 meses',
     location: 'Comunidad Valenciana',
@@ -10,18 +10,15 @@ export const EXPERIENCE = [
     summary:
       'Desarrollo de evolutivos a medida sobre Microsoft Dynamics 365 Business Central para clientes de distintos sectores.',
     bullets: [
-      'Extensiones en AL: tablas, páginas, table/page extensions, codeunits y event subscribers.',
-      'Informes RDLC personalizados desde el diseñador visual y manipulación directa del XML del layout.',
-      'Lógica de negocio mediante codeunits con patrones SingleInstance para gestión de contexto entre eventos.',
-      'Suscripción a eventos del sistema (OnBefore/OnAfter) para extender el comportamiento estándar sin tocar la base.',
-      'Validación funcional estructurada y elaboración de documentación técnica y de usuario antes de la entrega.',
+      'Extensiones y lógica de negocio en AL junto a un equipo que trabajaba con Git y Azure DevOps.',
+      'Automatización de la asignación de proyectos y tareas y propagación de datos en diarios de cobro y pago.',
+      'Informes RDLC personalizados con múltiples orígenes de datos y agrupaciones.',
     ],
     thumbnail: '/assets/exp/d4b_logo.png',
     preview: '/assets/exp/d4b_grande.png',
     accent: '#0078d4',
     thumbnailFit: 'contain',
     previewFit: 'contain',
-    url: 'https://placeholder.com',
     screenshots: [
       '/assets/exp/d4b_grande.png',
     ],
@@ -35,16 +32,14 @@ export const EXPERIENCE = [
     location: 'Valencia, España',
     tags: ['Laravel', 'PHP', 'MySQL', 'Stripe', 'JavaScript', 'HTML', 'CSS'],
     summary:
-      'Desarrollo full stack en una empresa de servicios de generación con IA. Responsable del sistema de pagos y facturación, y del frontend de producto.',
+      'Desarrollo del sistema de pagos, facturación y frontend de producto para una plataforma de IA generativa.',
     bullets: [
-      'Diseño e implementación de la pasarela de pagos y lógica de pricing con Laravel, Stripe y MySQL.',
-      'Desarrollo de interfaces web y landings para los distintos productos de la plataforma.',
-      'Integración de modelos de suscripción y facturación en el ecommerce.',
+      'Implementación de pasarela de pagos, precios y suscripciones con Laravel, Stripe y MySQL.',
+      'Desarrollo de interfaces web y páginas de producto para la plataforma.',
     ],
     thumbnail: '/assets/exp/hechiceria_logo.jpg',
     preview: '/assets/exp/hechiceria_grande.png',
     accent: '#7c3aed',
-    url: 'https://placeholder.com',
     previewFit: 'contain',
     screenshots: [
       '/assets/exp/hechiceria_grande.png',
@@ -69,7 +64,6 @@ export const EXPERIENCE = [
     accent: '#ffffff',
     thumbnailFit: 'contain',
     previewFit: 'cover',
-    url: 'https://placeholder.com',
     screenshots: [
       '/assets/exp/ktwin_grande.jpg',
     ],
@@ -78,8 +72,8 @@ export const EXPERIENCE = [
     id: 'eliwell',
     company: 'Eliwell Ibérica',
     role: 'Técnico del SAT',
-    period: 'Mar 2019 – Jun 2019',
-    duration: '4 meses',
+    period: '2020',
+    duration: '',
     location: 'Valencia, España',
     tags: ['Soporte técnico', 'Hardware', 'Sistemas operativos'],
     summary:
@@ -92,7 +86,6 @@ export const EXPERIENCE = [
     thumbnail: '/assets/exp/Eliwell_logo.png',
     preview: '/assets/exp/Eliwell_grande.png',
     accent: '#fff09e',
-    url: 'https://placeholder.com',
     thumbnailFit: 'contain',
     previewFit: 'contain',
     screenshots: [

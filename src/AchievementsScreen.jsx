@@ -112,18 +112,16 @@ export default function AchievementsScreen() {
           )}
         </section>
 
-        <section className="ach-section">
-          <SectionLabel>Habilidades</SectionLabel>
-          {hasSoftSkills ? (
+        {hasSoftSkills && (
+          <section className="ach-section">
+            <SectionLabel>Habilidades</SectionLabel>
             <div className="ach-tags">
               {SOFT_SKILLS.map((s) => (
                 <span key={s.id} className="ach-tag">{s.label}</span>
               ))}
             </div>
-          ) : (
-            <p className="ach-placeholder-text">Próximamente</p>
-          )}
-        </section>
+          </section>
+        )}
       </div>
     </div>
   );

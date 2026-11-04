@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react';
 import ExperienceScreen from './ExperienceScreen.jsx';
 import AchievementsScreen from './AchievementsScreen.jsx';
+import ProjectsScreen from './ProjectsScreen.jsx';
+import ProfileScreen from './ProfileScreen.jsx';
 
 const ASSETS = {
   background: "/assets/fondo.png",
@@ -49,15 +51,6 @@ function TopNav({ current, onNavigate, onBack, isDark, onToggleTheme }) {
         </span>
       </button>
     </nav>
-  );
-}
-
-function PlaceholderScreen({ title }) {
-  return (
-    <div className="placeholder-screen">
-      <p>{title}</p>
-      <span>Próximamente</span>
-    </div>
   );
 }
 
@@ -131,7 +124,11 @@ function StartScreen({ onStart, crtOn, isDark, onToggleTheme }) {
 }
 
 export default function App() {
-  const [screen, setScreen] = useState('start');
+  const readScreen = () => {
+    const hash = window.location.hash.slice(1);
+    return NAV_ITEMS.some((item) => item.id === hash) ? hash : 'start';
+  };
+  const [screen, setScreen] = useState(readScreen);
   const [crtOn, setCrtOn] = useState(true);
   const [isDark, setIsDark] = useState(true);
 
@@ -147,24 +144,35 @@ export default function App() {
     document.body.dataset.theme = isDark ? 'dark' : 'light';
   }, [isDark]);
 
+  useEffect(() => {
+    const syncScreen = () => setScreen(readScreen());
+    window.addEventListener('hashchange', syncScreen);
+    return () => window.removeEventListener('hashchange', syncScreen);
+  }, []);
+
+  const navigate = (next) => {
+    window.location.hash = next === 'start' ? '' : next;
+    setScreen(next);
+  };
+
   if (screen === 'start') {
-    return <StartScreen onStart={() => setScreen('experience')} crtOn={crtOn} isDark={isDark} onToggleTheme={() => setIsDark((d) => !d)} />;
+    return <StartScreen onStart={() => navigate('experience')} crtOn={crtOn} isDark={isDark} onToggleTheme={() => setIsDark((d) => !d)} />;
   }
 
   return (
     <>
       <TopNav
         current={screen}
-        onNavigate={setScreen}
-        onBack={() => setScreen('start')}
+        onNavigate={navigate}
+        onBack={() => navigate('start')}
         isDark={isDark}
         onToggleTheme={() => setIsDark((d) => !d)}
       />
       {screen === 'experience' && <ExperienceScreen />}
       {screen === 'formation'  && <AchievementsScreen />}
-      {screen === 'projects'   && <PlaceholderScreen title="PROYECTOS" />}
-      {screen === 'about'      && <PlaceholderScreen title="SOBRE MÍ" />}
-      {screen === 'contact'    && <PlaceholderScreen title="CONTACTO" />}
+      {screen === 'projects'   && <ProjectsScreen />}
+      {screen === 'about'      && <ProfileScreen />}
+      {screen === 'contact'    && <ProfileScreen contact />}
     </>
   );
 }
